@@ -1,3 +1,6 @@
+humanScore = 0;
+computerScore = 0;
+
 function getComputerChoice() {
     let choice;
     const election = Math.floor(Math.random() * 3);
@@ -18,4 +21,16 @@ function getComputerChoice() {
     return choice;
 }
 
+function getHumanChoice() {
+    let choice = prompt("Rock, Paper or Scissors?").toLowerCase();
+    console.log(choice);
+
+    if (choice === "rock" || choice === "paper" || choice === "scissors") {
+        return choice;
+    }
+    else  {
+        console.log("Invalid answer");
+    }
+}
 getComputerChoice();
+getHumanChoice();
