@@ -12,14 +12,14 @@ function getComputerChoice() {
         choice = "Scissors";
     }
 
-    console.log(choice);
+    console.log(`Computer: ${choice}`);
     return choice;
 }
 
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?").toLowerCase();
     choice = choice.charAt(0).toUpperCase() + choice.slice(1);
-    console.log(choice);
+    console.log(`User: ${choice}`);
 
     if (choice === "Rock" || choice === "Paper" || choice === "Scissors") {
         return choice;
@@ -58,8 +58,9 @@ function playGame() {
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
         console.log(`Your score ${humanScore}. Computer score ${computerScore}`);
-        if (humanScore === 3 || computerScore === 3)
+        if (humanScore === 3 || computerScore === 3){
             break
+        }
     }
 
     if (humanScore > computerScore) {
